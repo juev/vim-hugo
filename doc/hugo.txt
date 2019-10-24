@@ -1,0 +1,52 @@
+*hugo.txt* Blogging from the command line should not be tedious.
+
+Author: Denis Evsyukov <denis@evsyukov.org>
+
+==============================================================================
+INTRODUCTION                                    *hugo*
+
+This script is intended to automate the process of creating and editing
+Hugo (https://gohugo.io/) blog posts from within vim.
+
+This is complete rewrite of parkr/vim-jekyll
+(https://github.com/parkr/vim-jekyll)
+
+==============================================================================
+CONFIGURATION                                   *hugo-configuration*
+
+There are a few global variables that can be set to adjust the way vim handles
+Hugo blogs. Default values for each are listed below unless noted.
+
+                                                *g:hugo_post_dirs*  >
+    let g:hugo_post_dirs = ['content/posts', 'content/pages']
+A |List| containing paths to search to identify a Hugo blog's posts
+directory. For most Hugo blogs, this will be `content/posts`.
+
+                                                *g:hugo_post_extension*  >
+    let g:hugo_post_extension = '.markdown'
+The extension used when creating new posts.
+
+                                                *g:hugo_path  >
+    let g:hugo_path = "~/path/blog"
+The path where the blog is placed on your hard disk
+
+==============================================================================
+COMMANDS                                        *hugo-commands*
+
+The |:HugoPost| (Hugo post) command is used to create blog posts.
+
+                                                *hugo-:Hpost*
+:HugoPost[!]  [{name}] Create or edit the specified post. With no argument, you
+                    will be prompted to select a post or enter a title.
+
+==============================================================================
+ABOUT                                           *hugo-about*
+
+Grab the latest version or report a bug on Github:
+
+https://github.com/juev/vim-hugo/
+
+                                                *hugo-license*
+Distributed under the same terms as Vim itself. See |license|.
+
+ vim:tw=78:et:ft=help:norl:
